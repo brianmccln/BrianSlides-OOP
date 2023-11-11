@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Ground Up Coffee Shop</title>
+
+    <link href="css/brian-slider.css" rel="stylesheet">
+
+</head>
+
+<body>
+    
+    <div class="container">
+        
+        <div class="slideshow-container">
+
+            <h3>History of Coffee</h3> 
+
+            <div class="slideshow-holder">
+
+                <ul class="slideshow">
+                    <!-- slides HERE as li tags w img inside -->
+                </ul>
+
+            </div>
+        
+            <button id="prev"><<</button>
+            <button id="next">>></button>
+            <button id="auto-play">AUTO</button>
+
+        </div>
+
+    </div>
+
+    <script src="js/coffee-data.js"></script>
+    <script src="js/BrianSlider.js"></script>
+
+    <script>
+        
+        const slideshow = new BrianSlider(coffeeHistArray, '.slideshow');
+        slideshow.load();
+
+    </script>
+
+</body>
+
+</html>
