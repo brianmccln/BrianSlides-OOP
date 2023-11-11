@@ -1,4 +1,4 @@
-const coffeeHistArray = [
+const objArr = [
 	{
         year: 800, 
         img: "DancingGoats.jpg", 

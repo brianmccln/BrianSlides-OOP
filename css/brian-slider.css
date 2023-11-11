@@ -19,7 +19,7 @@ body {
     background-color: #333;
     padding: 10px;
     margin: 0 auto 50px auto;
-    min-height: 750px;
+    min-height: 700px;
     color: #fff;
     text-align: center;
 }
@@ -32,7 +32,7 @@ body {
 .slideshow-holder {
     position: relative;
     padding: 10px;
-    min-height: 675px;
+    min-height: 625px;
     margin: 0px;
     overflow-x: auto;
 }

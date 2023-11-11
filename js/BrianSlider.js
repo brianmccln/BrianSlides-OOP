@@ -33,8 +33,8 @@ class BrianSlider {
     load() {
         this.objArr.forEach(obj => {
             this.slider.innerHTML += `<li class="slide">
-            <img src="./images/${obj.img}" alt="${obj.alt}">
-            <div>${obj.year} AD: ${obj.capt}</div></li>`;
+            <img src="./images/${obj.img}" alt="${obj.alt} onclick="read()">
+            <div>${obj.capt}</div></li>`;
         });        
     }
 
