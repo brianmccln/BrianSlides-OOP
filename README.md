@@ -21,3 +21,4 @@ slideshow.load();
 - Click << for the previous slide.
 - Click AUTO for autoplay (the button says STOP while autoplay is in progress).
 - Click STOP to stop autoplay and go back to using the >> and << buttons.
+- Unlike so many Class files, BrianSlider.js is NOT minified, so programmers can analyze the code.
