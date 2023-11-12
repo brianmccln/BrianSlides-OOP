@@ -76,8 +76,9 @@ button {
 }
 button:hover {
     cursor: pointer;
-    background-color: #fff;
-    padding: 10px;
+    background-color: #dfd;
+    font-size: 0.8rem;
+    padding: 6px;
 }
 h3 {
     font-size: 2rem;
