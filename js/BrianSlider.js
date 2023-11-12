@@ -36,15 +36,10 @@ class BrianSlider {
 
     auto() {
         console.log('auto() AUTO');
-        if(!this.autoPlay) { 
-            this.autoBtn.textContent = 'STOP';
-            this.next();
-        } else {
-            this.autoBtn.textContent = 'AUTO';
-        }
+        this.autoBtn.textContent = !this.autoPlay ? 'STOP' : 'AUTO';
         this.autoPlay = !this.autoPlay;
-        console.log('auto() STOP');
-        console.log(' this.autoPlay:', this.autoPlay);
+        this.autoPlay ? this.next() : this.sound.pause();
+        console.log('auto() this.autoPlay:', this.autoPlay);
     }
 
     load() {
@@ -79,6 +74,7 @@ class BrianSlider {
     }
 
     next() {
+        console.log('next() this.autoPlay', this.autoPlay);
         let dist = 0;
         this.i++;
         if(this.i == this.len) {
@@ -99,14 +95,15 @@ class BrianSlider {
             this.sound.pause();
             this.sound.src = `./audio/${this.objArr[this.i].snd}`;
             this.sound.play();
-            console.log('this.autoPlay:', this.autoPlay);
-            this.sound.onended = () => { // when the sound ends
-                if(this.autoPlay) { // if autoPlay is true
-                    console.log('sound ended');
+            if(this.autoPlay) { // if autoPlay is true
+                this.sound.onended = () => { // when the sound ends
+                    console.log(`sound ${this.i} ended -- this.next()`);
                     this.next(); // call the next() function again, recursively
                 }
-            };
-        } 
+            }
+        } else { // no sound, yet autoplay, so wait 10 seconds before next slide
+            console.log('no sound, yet autoplay, so wait 10 seconds before next slide');
+            setTimeout(() => this.next(), 10000);
+        }
     }
-
 }
