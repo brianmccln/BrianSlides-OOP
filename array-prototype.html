@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #365b71;
+            margin: 0;
+            /* font-size: 12px; */
+            font-family: sans-serif;
+        }
+        
+        .container {
+            /* border: 6px dashed blue; */
+            margin: 10px auto;
+            background-color: #777;
+            overflow-x: hidden;
+            min-width: 700px;
+            max-width: 1050px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+    </div>
+
+    <script>
+        // Don't have all the array methods you need? No problem!
+        // Make your own with Array.prototype.doStuff = function() { }
+        // Then call your method on any array in your script
+        // Use function() for a method that does not return anything,
+        // that is, it mutates the original array
+        // Use => if you want your function to return a new array without
+        // transforming the original
+
+        // make a capitalize() method that capitalizes each string in an array
+        // it operates on the original array, in place, and doesn't return anything
+        Array.prototype.capitalize = function() {
+            for (let i = 0; i < this.length; i++) {
+              this[i] = this[i][0].toUpperCase() + this[i].slice(1);
+            }
+        };
+
+          const fruits = ["apple","apricot","banana","blueberry","cherry","kiwi","lime","lemon","mango","orange"];
+          fruits.capitalize();
+
+          console.log(fruits);
+
+          const ppl = ["amy", "bob", "cal", "dan", "eva", "fay", "geo", "hal", "ida", "joe", "ken", "lou", "may"];
+          ppl.capitalize();
+
+          console.log(ppl);
+
+          // make a pair() method that pairs up two array items at
+          // random and returns the pair: "orange-mango", "amy-dan"
+          // getRandomPair(true) returns in ascending order
+          // getRandomPair() also returns in ascending order by default
+          // getRandomPair(false) returns in descending order
+          Array.prototype.pair = function(asc=true) {
+            let arrCopy = [...this];
+            let r1 = Math.floor(Math.random() * arrCopy.length);
+            let a = arrCopy[r1];
+            arrCopy.splice(r1,1);
+            let r2 = Math.floor(Math.random() * arrCopy.length);
+            let b = arrCopy[r2];
+            if(asc) {
+                return a < b ? `${a}-${b}` : `${b}-${a}`;
+            } else {
+                return a < b ? `${b}-${a}` : `${a}-${b}`;
+            }
+        };
+
+        console.log('pair()', fruits.pair());
+        console.log('pair(true)', fruits.pair(true));        
+        console.log('pair(false)', fruits.pair(false));
+
+        console.log('pair()', ppl.pair());
+        console.log('pair(true)', ppl.pair(true));        
+        console.log('pair(false)', ppl.pair(false));
+        
+    </script>
+    
+</body>
+</html>

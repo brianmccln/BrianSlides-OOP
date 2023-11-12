@@ -96,6 +96,7 @@ class BrianSlider {
             }
         }, 15); 
         if(this.objArr[this.i].snd) { // if snd not null, there's a sound file
+            this.sound.pause();
             this.sound.src = `./audio/${this.objArr[this.i].snd}`;
             this.sound.play();
             console.log('this.autoPlay:', this.autoPlay);
