@@ -121,7 +121,7 @@ class BrianSlider {
             }
         } else { // no sound, yet autoplay, so wait 10 seconds before next slide
             console.log('no sound, yet autoplay, so wait 10 seconds before next slide');
-            setTimeout(() => this.next(), 10000);
+            setTimeout(() => this.next(), 15000);
         }
     }
 
