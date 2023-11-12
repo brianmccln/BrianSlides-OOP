@@ -59,7 +59,7 @@ const objArr = [
         img: "BrazilianLtCol.jpg", 
         alt: "Lt. Col. Francisco de Melo Palheta", 
         snd: "1727.mp3",
-        capt: "1713: The Brazilian coffee industry gets its start when Lt. Col. Francisco de Melo Palheta strikes up a secret liaison with the wife of French Guiana's governor. Although France guarded its New World coffee plantations to prevent cultivation from spreading, the lady surreptitiously supplies Palheta with cuttings and fertile seeds of coffee."
+        capt: "1727: The Brazilian coffee industry gets its start when Lt. Col. Francisco de Melo Palheta strikes up a secret liaison with the wife of French Guiana's governor. Although France guarded its New World coffee plantations to prevent cultivation from spreading, the lady surreptitiously supplies Palheta with cuttings and fertile seeds of coffee."
     },
     {
         year: 1773, 
