@@ -13,13 +13,16 @@ class BrianSlider {
         this.autoBtn = document.querySelector('#auto');
         this.autoBtn.addEventListener('click', this.auto.bind(this));
         this.rwndBtn = document.querySelector('#rwnd');
-        this.rwndBtn.addEventListener('click', this.rewind.bind(this));
+        this.rwndBtn.addEventListener('click', this.rwnd.bind(this));
+        this.muteBtn = document.querySelector('#mute');
+        this.muteBtn.addEventListener('click', this.mute.bind(this));
         this.leftPos = 0; // slider start position
         this.sound = new Audio();
         this.autoPlay = false;
+        this.muted = false;
     }
 
-    rewind() {
+    rwnd() {
         this.sound.pause();
         this.i = -1;
         let intrvl = setInterval(() => {
@@ -50,6 +53,21 @@ class BrianSlider {
         });        
     }
 
+    mute() {
+        this.muted = !this.muted;
+        if(this.muted) {
+            if(this.objArr[this.i].snd) { // if this slide has a sound
+                this.sound.volume = 0;
+                this.muteBtn.textContent = 'UNMU';
+            }
+        } else { // not muted
+            if(this.objArr[this.i].snd) {
+                this.sound.volume = 1;
+                this.muteBtn.textContent = 'MUTE';
+            }
+        }
+    }
+
     prev() {
         if(this.i > 0) this.i--; // if i is not already 0, subtract 1
         let dist = 0; // slider distance moved
@@ -58,7 +76,7 @@ class BrianSlider {
                 dist += 11;
                 this.leftPos += 11;
                 this.slider.style.left = this.leftPos + "px";
-                if(this.objArr[this.i].mp3) {
+                if(this.objArr[this.i].snd && !this.muted) {
                     this.sound.pause();
                     this.sound.src = `./audio/${this.objArr[this.i].snd}`;
                     this.sound.play();
@@ -91,7 +109,7 @@ class BrianSlider {
                 clearInterval(intrvl); 
             }
         }, 15); 
-        if(this.objArr[this.i].snd) { // if snd not null, there's a sound file
+        if(this.objArr[this.i].snd && !this.muted) { // if snd not null, there's a sound file
             this.sound.pause();
             this.sound.src = `./audio/${this.objArr[this.i].snd}`;
             this.sound.play();
@@ -106,4 +124,5 @@ class BrianSlider {
             setTimeout(() => this.next(), 10000);
         }
     }
+
 }
