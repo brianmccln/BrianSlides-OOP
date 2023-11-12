@@ -68,10 +68,11 @@ body {
     overflow-y: scroll;
 }
 button {
-    padding: 7px;
+    padding: 5px;
     margin: 10px 10px 15px 0;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 0.9rem;
+    width: 50px;
 }
 button:hover {
     cursor: pointer;
