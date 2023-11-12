@@ -31,7 +31,7 @@ const objArr = [
         img: "CaptJohnSmithPocahontas.jpg", 
         alt: "Captain John Smith being saved by Pocahontas", 
         snd: "1607.mp3",
-        capt: "1607: Captain John Smith helps to found the colony of Virginia at Jamestown. It is believed that he introduced coffee to North America."
+        capt: "1607: Captain John Smith is believed to have introduced coffee to North America. Perhaps the legendary founder of the Jamestown colony invited Pocahontas for a cuppa java after the Native American beauty convinced her father, the tribal chief, to spare Smith's life: \"Don't kill him! He's got the coffee!\""
     },
     {
         year: 1652, 
@@ -87,14 +87,14 @@ const objArr = [
         img: "ProhibitionDumpingBooze.jpg", 
         alt: "Barrel of booze being dumped during Prohibition", 
         snd: null,
-        capt: "1920: U.S. national prohibition of alcohol begins in January of 1920. Within about six months, coffee consumption rose by 7%, reaching 9% by 19 months later."
+        capt: "1920: U.S. national prohibition of alcohol begins. Within about six months, coffee consumption rises by 7%. After all, people have to drink something. In 1933 the Prohibition Act is repealed."
     },
     {
         year: 1938, 
         img: "NescafeInstantCoffee.jpg", 
         alt: "Nescafe Instant Coffee vintage magazine ad", 
         snd: null,
-        capt: "1938: The Nescafé brand, which introduced a more advanced coffee refining process, is launched in 1938. Today, close to 50% of the world's green coffee is used to produce instant coffee."
+        capt: "1938: The Nescafé brand is launched, using a more advanced instant coffee production process. Today, close to 50% of the world's green coffee is used to produce instant coffee."
     },
     {
         year: 2000, 
