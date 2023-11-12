@@ -10,11 +10,28 @@ class BrianSlider {
         this.prevBtn.addEventListener('click', this.prev.bind(this));
         this.nextBtn = document.querySelector('#next');
         this.nextBtn.addEventListener('click', this.next.bind(this));
-        this.autoBtn = document.querySelector('#auto-play');
+        this.autoBtn = document.querySelector('#auto');
         this.autoBtn.addEventListener('click', this.auto.bind(this));
+        this.rwndBtn = document.querySelector('#rwnd');
+        this.rwndBtn.addEventListener('click', this.rewind.bind(this));
         this.leftPos = 0; // slider start position
         this.sound = new Audio();
         this.autoPlay = false;
+    }
+
+    rewind() {
+        this.sound.pause();
+        this.i = -1;
+        let intrvl = setInterval(() => {
+            if(this.leftPos <= 90) {
+                this.leftPos += 30;
+                this.slider.style.left = this.leftPos + "px";
+            } else {
+                clearInterval(intrvl);
+                this.slider.style.left = "0";
+                this.leftPos = 0;
+            }
+        }, 15);
     }
 
     auto() {
@@ -42,9 +59,9 @@ class BrianSlider {
         if(this.i > 0) this.i--; // if i is not already 0, subtract 1
         let dist = 0; // slider distance moved
         let intrvl = setInterval(() => {
-            if(dist <= 405 && this.leftPos <= 0) {
-                dist += 15;
-                this.leftPos += 15;
+            if(dist <= 330 && this.leftPos <= 0) {
+                dist += 10;
+                this.leftPos += 10;
                 this.slider.style.left = this.leftPos + "px";
                 if(this.objArr[this.i].mp3) {
                     this.sound.pause();
@@ -70,9 +87,9 @@ class BrianSlider {
             this.slider.style.left = this.leftPos + "px";
         }
         let intrvl = setInterval(() => {
-            if(this.i > 1 && dist <= 405 && this.leftPos >= -((this.len-1)*405-110)) {
-                dist += 15;
-                this.leftPos -= 15; 
+            if(this.i > 1 && dist <= 330 && this.leftPos >= -((this.len-1)*405-110)) {
+                dist += 10;
+                this.leftPos -= 10; 
                 this.slider.style.left = this.leftPos + "px";
             } else {
                 clearInterval(intrvl); 

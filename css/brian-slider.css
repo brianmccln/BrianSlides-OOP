@@ -10,7 +10,7 @@ body {
     margin: 10px auto;
     background-color: #777;
     overflow-x: hidden;
-    width: 850px;
+    width: 950px;
     padding: 10px;
 }
 
@@ -66,6 +66,8 @@ body {
 button {
     padding: 10px;
     margin: 10px 10px 15px 0;
+    font-weight: bold;
+    font-size: 1.1rem;
 }
 button:hover {
     cursor: pointer;
