@@ -55,10 +55,10 @@ const objArr = [
         capt: "1713: The Dutch unwittingly provide Louis XIV of France with a coffee bush when a French naval officer  steals a seedling and transports it to Martinique, a French island colony in the West Indies. This one plant's descendants will literally provide the seeds of the entire Western coffee industry, for within 50 years there are 19 million coffee trees on Martinique. Eventually, 90 percent of the world's coffee will be traced back to this one stolen seedling."
     },
     {
-        year: 1713, 
+        year: 1727, 
         img: "BrazilianLtCol.jpg", 
         alt: "Lt. Col. Francisco de Melo Palheta", 
-        snd: null,
+        snd: "1727.mp3",
         capt: "1713: The Brazilian coffee industry gets its start when Lt. Col. Francisco de Melo Palheta strikes up a secret liaison with the wife of French Guiana's governor. Although France guarded its New World coffee plantations to prevent cultivation from spreading, the lady surreptitiously supplies Palheta with cuttings and fertile seeds of coffee."
     },
     {
