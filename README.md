@@ -23,4 +23,8 @@ slideshow.load();
 - Click >> to hear the first slide play, then >> to get the next slide.
 - Click << for the previous slide.
 - Click AUTO for autoplay (the button says STOP while autoplay is in progress).
+<<<<<<< HEAD
 - Click STOP to stop autoplay and go back to using the >> and << buttons.
+=======
+- Click STOP to stop autoplay and go back to using the >> and << buttons.
+>>>>>>> 4c04cc5982e8329350186c86dd4820211b75e8ce
