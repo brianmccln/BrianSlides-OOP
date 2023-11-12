@@ -13,6 +13,7 @@ body {
     min-width: 700px;
     max-width: 1050px;
     padding: 10px;
+    border-radius: 5px;
 }
 
 /* slideshow applied to ul where each li is one slide */
@@ -23,6 +24,7 @@ body {
     min-height: 700px;
     color: #fff;
     text-align: center;
+    border-radius: 5px;
 }
 .slideshow-container h3 {
     color: #fff;
@@ -36,6 +38,7 @@ body {
     min-height: 625px;
     margin: 0px;
     overflow-x: auto;
+    border-radius: 5px;
 }
 .slideshow {
     position: absolute;
