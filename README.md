@@ -17,6 +17,9 @@
 ```js
 const slideshow = new BrianSlider(objArr, '.slideshow');
 slideshow.load();
+
+// Demo:
+// https://guesstimation.net/BrianSlider/brian-slider.html
 ```
 
 - The slideshow has Next >> and Prev << buttons, as well as an Autoplay option.
