@@ -27,4 +27,6 @@ slideshow.load();
 - Click STOP to stop autoplay and go back to using the >> and << buttons.
 =======
 - Click STOP to stop autoplay and go back to using the >> and << buttons.
->>>>>>> 4c04cc5982e8329350186c86dd4820211b75e8ce
+
+### BrianSlider Slideshow Demo
+https://guesstimation.net/BrianSlider/brian-slider.html
